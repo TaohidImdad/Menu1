@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+             display: flex;
+             justify-content: space-between;
+             width: 100%;
+             padding: 10px 10%;
+            
+        }
+
+        .logo{
+            width: 160px;
+            align-self: center;
+        }
+
+        .navbar ul{
+            list-style-type: none;
+            align-self: center;
+            
+        }
+
+        .navbar ul li{
+            display: inline;
+            float: left;
+           
+             
+        }
+
+        .navbar ul li a{
+            text-decoration: none;
+            padding: 10px;
+           
+        }
+        .navbar ul li a:hover{
+            background-color: rgb(24, 139, 139);
+            cursor: pointer;
+            color: white;
+        }
+        
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(10, 10, 232);
+            padding: 10px 16px;
+            border-radius: 15px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .signin{
+          background-color: white;
+          border: 1.5px solid  rgb(10, 10, 232);
+          color:  rgb(10, 10, 232);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+         <nav class="navbar">
+            <h1 class="logo">Logo</h1>
+            <ul >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Carriar</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+
+            <div>
+                <a class="btn signin" href="#">Signin</a>
+                <a class="btn" href="#">Login</a>
+            </div>
+         </nav>
+   
+</body>
+</html>
+
+
+
