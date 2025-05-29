@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Colors & Backgrounds Notes</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0066cc;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #444;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .example {
+      background: #f0f8ff;
+      padding: 1rem;
+      border-left: 4px solid #007acc;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .sample {
+      margin-top: 0.5rem;
+      padding: 1rem;
+      border: 1px dashed #ccc;
+      background: #fff;
+    }
+
+    .color-box {
+      padding: 1rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .bg-image {
+      height: 150px;
+      background-image: url('https://www.w3schools.com/css/img_lights.jpg');
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .gradient-box {
+      height: 100px;
+      margin-bottom: 1rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Colors & Backgrounds - Notes & Examples</h1>
+
+  <section>
+    <h2>1. Color Values</h2>
+    <p>CSS supports different ways to define color:</p>
+    <ul>
+      <li><strong>Name:</strong> <code>red</code>, <code>blue</code>, <code>green</code></li>
+      <li><strong>Hex:</strong> <code>#ff0000</code>, <code>#00ff00</code></li>
+      <li><strong>RGB:</strong> <code>rgb(255, 0, 0)</code></li>
+      <li><strong>HSL:</strong> <code>hsl(0, 100%, 50%)</code></li>
+    </ul>
+    <div class="example">
+      <div class="color-box" style="background: red;">Color Name: red</div>
+      <div class="color-box" style="background: #00ff00;">Hex: #00ff00</div>
+      <div class="color-box" style="background: rgb(0, 0, 255);">RGB: rgb(0, 0, 255)</div>
+      <div class="color-box" style="background: hsl(300, 100%, 50%);">HSL: hsl(300, 100%, 50%)</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Background Properties</h2>
+    <ul>
+      <li><code>background-color</code>: sets solid background color</li>
+      <li><code>background-image</code>: sets image background</li>
+      <li><code>background-repeat</code>: repeat, no-repeat, repeat-x/y</li>
+      <li><code>background-position</code>: top, center, right, etc.</li>
+    </ul>
+    <div class="example">
+      <div class="sample" style="background-color: lightblue;">Background Color: lightblue</div>
+      <div class="sample bg-image">Background Image with Cover</div>
+      <div class="sample" style="
+        background-image: url('https://www.w3schools.com/css/img_lights.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding: 3rem;
+        color: white;
+        background-size: 100px;
+      ">
+        No-repeat, right center position
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Gradients</h2>
+    <p>Gradients are smooth transitions between colors.</p>
+    <ul>
+      <li><code>linear-gradient()</code>: Top to bottom, left to right</li>
+      <li><code>radial-gradient()</code>: Circle-like from center outward</li>
+    </ul>
+    <div class="example">
+      <div class="gradient-box" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+        Linear Gradient (Left to Right)
+      </div>
+      <div class="gradient-box" style="background: linear-gradient(to bottom, #6a11cb, #2575fc);">
+        Linear Gradient (Top to Bottom)
+      </div>
+      <div class="gradient-box" style="background: radial-gradient(circle, #ff9a9e, #fad0c4);">
+        Radial Gradient
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

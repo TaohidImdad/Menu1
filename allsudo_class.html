@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All CSS Pseudo-Classes Example</title>
+  <style>
+    /* User action pseudo-classes */
+    a:hover {
+      color: red;
+    }
+    a:visited {
+      color: purple;
+    }
+    a:active {
+      color: orange;
+    }
+
+    input:focus {
+      background-color: lightyellow;
+    }
+
+    button:active {
+      background-color: green;
+    }
+
+    /* Form pseudo-classes */
+    input:required {
+      border: 2px solid red;
+    }
+    input:disabled {
+      background-color: #eee;
+    }
+    input:checked + label {
+      color: green;
+    }
+
+    /* Structural pseudo-classes */
+    ul li:first-child {
+      font-weight: bold;
+    }
+    ul li:last-child {
+      font-style: italic;
+    }
+    ul li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+    ul li:nth-child(even) {
+      background-color: #d0d0d0;
+    }
+    ul li:nth-child(3) {
+      color: blue;
+    }
+
+    /* Negation and special */
+    p:not(.highlight) {
+      color: gray;
+    }
+
+    div:empty {
+      height: 20px;
+      background-color: lightblue;
+    }
+
+    section:target {
+      background-color: #fffdc4;
+      border: 2px dashed orange;
+    }
+
+    /* ✅ Modern :has() pseudo-class (only supported in modern browsers) */
+    /* Style a parent <div> that HAS a checked checkbox inside it */
+    .box:has(input:checked) {
+      border: 2px solid green;
+      background-color: #e0ffe0;
+    }
+
+    /* Use :has() to change the style of labels that have an input inside */
+    label:has(input:checked) {
+      font-weight: bold;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Pseudo-Classes (Classic + Modern)</h1>
+
+  <!-- User Action -->
+  <a href="#target">Hover, Active, Visited Link</a>
+  <br><br>
+
+  <input type="text" placeholder="Focus here...">
+  <br><br>
+
+  <button>Click Me (Active)</button>
+  <br><br>
+
+  <!-- Form Pseudo -->
+  <form>
+    <input type="text" required placeholder="Required Field">
+    <br><br>
+
+    <input type="text" disabled value="Disabled Field">
+    <br><br>
+
+    <input type="checkbox" id="chk1" checked>
+    <label for="chk1">Checked Checkbox</label>
+    <br><br>
+  </form>
+
+  <!-- Structural Pseudo -->
+  <ul>
+    <li>Item 1 (first-child)</li>
+    <li>Item 2 (nth-child even)</li>
+    <li>Item 3 (nth-child 3)</li>
+    <li>Item 4 (nth-child even)</li>
+    <li>Item 5 (last-child)</li>
+  </ul>
+
+  <!-- Negation and empty -->
+  <p class="highlight">This is a highlighted paragraph.</p>
+  <p>This paragraph is gray (not .highlight)</p>
+
+  <div></div> <!-- empty div -->
+
+  <!-- Target -->
+  <p><a href="#target">Go to Target Section</a></p>
+  <section id="target">
+    <h2>This is the target section</h2>
+    <p>It gets styled when targeted via anchor.</p>
+  </section>
+
+  <!-- Modern :has() -->
+  <div class="box">
+    <input type="checkbox" id="cb1" checked>
+    <label for="cb1">Checkbox Inside a .box</label>
+  </div>
+
+  <br>
+
+  <label>
+    <input type="checkbox" checked> Label with Checked Input
+  </label>
+
+</body>
+</html>

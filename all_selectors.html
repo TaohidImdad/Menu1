@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS All Selectors Example</title>
+  <style>
+    /* 1. Universal Selector */
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 2. Element Selector */
+    h1 {
+      color: darkblue;
+    }
+
+    /* 3. Class Selector */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* 4. ID Selector */
+    #unique {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 5. Grouping Selector */
+    h2, p {
+      margin: 10px 0;
+    }
+
+    /* 6. Descendant Selector */
+    .container p {
+      color: green;
+    }
+
+    /* 7. Child Selector */
+    .container > span {
+      color: purple;
+    }
+
+    /* 8. Adjacent Sibling Selector */
+    h3 + p {
+      color: orange;
+    }
+
+    /* 9. General Sibling Selector */
+    h4 ~ p {
+      font-style: italic;
+    
+    }
+
+    /* 10. Attribute Selectors */
+    a[target] {
+      color: rgb(12, 148, 148);
+    }
+    input[type="text"] {
+      border: 2px solid blue;
+    }
+
+     /* The ^= operator means "starts with". */
+     /* The $= operator means "ends with". */
+     /* The *= operator means "contains". */
+
+    img[alt^="Logo"] {
+      width: 50px;
+    }
+    a[href$=".pdf"] {
+      font-weight: bold;
+    }
+    a[href*="example"] {
+      text-decoration: underline;
+    }
+
+    /* 11. Pseudo-classes */
+    a:hover {
+      color: crimson;
+    }
+    li:first-child {
+      color: green;
+    }
+    li:last-child {
+      color: red;
+    }
+    li:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    /* 12. Pseudo-elements */
+    p::before {
+      content: "👉 ";
+    }
+    p::after {
+      content: " ✔";
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors</h1>
+
+  <h2 class="highlight">This is a class selector</h2>
+  <p id="unique">This is an ID selector</p>
+
+  <div class="container">
+    <p>This paragraph is inside .container (descendant selector).</p>
+    <span>This span is a direct child of .container (child selector).</span>
+  </div>
+
+  <h3>Heading 3</h3>
+  <p>This is adjacent sibling of h3.</p>
+  <p>This is adjacent sibling of h3.</p>
+
+  <h4>Heading 4</h4>
+  <p>This is a general sibling of h4.</p>
+  <p>This is another general sibling of h4.</p>
+  <p>This is another general sibling of h4.</p>
+
+  <a href="https://example.com" target="_blank">External Link</a><br>
+  <a href="doc.pdf">PDF File</a><br>
+
+  <input type="text" placeholder="Type here"><br>
+
+  <img src="logo.png" alt="Logo Image">
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+</body>
+</html>

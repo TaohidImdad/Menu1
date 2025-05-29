@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Pseudo-Elements Example</title>
+  <style>
+    /* ::before */
+    h2::before {
+      content: "🔥 ";
+      color: orange;
+    }
+
+    /* ::after */
+    h2::after {
+      content: " ✅";
+      color: green;
+    }
+
+    /* ::first-letter */
+    p::first-letter {
+      font-size: 2em;
+      font-weight: bold;
+      color: navy;
+    }
+
+    /* ::first-line */
+    p::first-line {
+      color: darkgreen;
+      font-style: italic;
+    }
+
+    /* ::selection */
+    p::selection {
+      background-color: yellow;
+      color: black;
+    }
+
+    /* ::placeholder */
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+
+    /* ::marker */
+    ul li::marker {
+      color: red;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Pseudo-Elements Demo</h1>
+
+  <h2>This is a heading</h2>
+
+  <p>
+    This paragraph demonstrates pseudo-elements like ::first-letter, ::first-line, and ::selection. Try selecting some text!
+  </p>
+
+  <input type="text" placeholder="Type something...">
+
+  <h3>List with styled markers:</h3>
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+</body>
+</html>
