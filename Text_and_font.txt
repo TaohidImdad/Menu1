@@ -1,0 +1,97 @@
+Text and Font Properties in CSS
+===============================
+
+1. Font Properties
+------------------
+Control the appearance of text fonts.
+
+A. font-family
+   - Defines the font face (e.g., Arial, "Times New Roman").
+   - Use fallbacks: font-family: "Helvetica", Arial, sans-serif;
+   - Generic families: serif, sans-serif, monospace, cursive, fantasy.
+
+   Example:
+     body {
+       font-family: "Open Sans", Arial, sans-serif;
+     }
+
+B. font-size
+   - Sets text size (absolute or relative units).
+   - Common units: px, rem, em, %.
+
+   Example:
+     h1 { font-size: 2rem; }  /* 32px if root = 16px */
+     p  { font-size: 16px; }
+
+C. font-style
+   - Controls italicization.
+   - Values: normal, italic, oblique.
+
+   Example:
+     .emphasis { font-style: italic; }
+
+D. font-weight
+   - Sets text thickness.
+   - Values: normal, bold, 100-900 (100=thin, 400=normal, 700=bold).
+
+   Example:
+     .bold-text { font-weight: 700; }
+     .light-text { font-weight: 300; }
+
+2. Text Properties
+------------------
+Control alignment, decoration, and spacing.
+
+A. text-align
+   - Aligns text horizontally.
+   - Values: left, right, center, justify.
+
+   Example:
+     .center { text-align: center; }
+
+B. text-decoration
+   - Adds underlines/overlines/strikethrough.
+   - Values: none, underline, overline, line-through.
+   - Shorthand: text-decoration: [line] [color] [style].
+
+   Example:
+     a { text-decoration: underline solid blue; }
+     .strike { text-decoration: line-through; }
+
+C. text-transform
+   - Modifies text capitalization.
+   - Values: none, capitalize, uppercase, lowercase.
+
+   Example:
+     .uppercase { text-transform: uppercase; }
+
+3. Spacing Properties
+---------------------
+Adjust readability and text density.
+
+A. line-height
+   - Sets vertical space between lines.
+   - Unitless (e.g., 1.5) or with units (e.g., 24px).
+
+   Example:
+     p { line-height: 1.6; }  /* 1.6 × font-size */
+
+B. letter-spacing
+   - Adjusts space between characters.
+   - Values: normal, <length> (e.g., 1px, -0.5em).
+
+   Example:
+     .tracked { letter-spacing: 2px; }
+
+C. word-spacing
+   - Adjusts space between words.
+   - Values: normal, <length>.
+
+   Example:
+     .wide-words { word-spacing: 0.5em; }
+
+Best Practices:
+- Use relative units (rem/em) for font-size.
+- Limit font families to 2-3 per project.
+- Prefer line-height: 1.5-1.6 for readability.
+- Use text-transform for consistent casing.

@@ -1,0 +1,73 @@
+Colors and Units in CSS
+=======================
+
+1. Colors
+---------
+Colors can be defined in multiple ways:
+
+A. Color Names (e.g., red, blue, green)
+   Example: 
+     color: tomato;
+
+B. HEX (#RRGGBB or #RGB)
+   Example: 
+     color: #ff0000;  /* Red */
+     color: #0f0;     /* Green (short) */
+
+C. RGB (Red, Green, Blue)
+   Syntax: rgb(0-255, 0-255, 0-255)
+   Example: 
+     color: rgb(255, 0, 0);  /* Red */
+
+D. RGBA (RGB + Alpha for opacity)
+   Syntax: rgba(0-255, 0-255, 0-255, 0.0-1.0)
+   Example: 
+     color: rgba(255, 0, 0, 0.5);  /* Semi-transparent red */
+
+E. HSL (Hue, Saturation, Lightness)
+   Syntax: hsl(0-360, 0%-100%, 0%-100%)
+   Example: 
+     color: hsl(240, 100%, 50%);  /* Blue */
+
+F. HSLA (HSL + Alpha)
+   Syntax: hsla(0-360, 0%-100%, 0%-100%, 0.0-1.0)
+   Example: 
+     color: hsla(120, 100%, 50%, 0.3);  /* Semi-transparent green */
+
+2. Units
+--------
+Units define sizes/dimensions in CSS:
+
+A. Absolute Units (Fixed)
+   - px (Pixels)       Example: font-size: 16px;
+   - pt (Points)       Example: padding: 12pt;
+   - cm/mm/in (Rarely used in web design)
+
+B. Relative Units (Dynamic)
+   - em  (Relative to parent font size)
+         Example: 
+           parent { font-size: 20px; }
+           child { font-size: 1.5em; }  /* 30px */
+   
+   - rem (Relative to root/html font size)
+         Example: 
+           html { font-size: 16px; }
+           p { font-size: 1.5rem; }  /* 24px */
+   
+   - %   (Percentage of parent size)
+         Example: 
+           width: 50%;  /* Half of parent's width */
+   
+   - vw  (1% of viewport width)
+         Example: 
+           width: 100vw;  /* Full viewport width */
+   
+   - vh  (1% of viewport height)
+         Example: 
+           height: 100vh;  /* Full viewport height */
+
+Key Notes:
+- Prefer rem for fonts (consistent scaling).
+- Use em for component-level scaling.
+- vw/vh for responsive full-screen layouts.
+- HSL/RGBA for transparency and readability.

@@ -1,0 +1,70 @@
+
+CSS Mastery Roadmap - Step by Step
+
+🟢 Beginner Level
+1. What is CSS & How it Works
+2. Types of CSS – Inline, Internal, External
+3. CSS Syntax & Selectors
+   - Basic selectors (element, .class, #id)
+   - Grouping & combining selectors
+4. Colors in CSS – hex, rgb(), rgba(), hsl()
+5. Text Formatting
+   - font-family, font-size, color, text-align, line-height
+6. Box Model
+   - margin, border, padding, content
+7. Units in CSS – px, em, rem, %, vh, vw
+8. Backgrounds
+   - background-color, background-image, background-size, etc.
+9. Borders & Outlines
+10. Lists and Tables Styling
+
+🟡 Intermediate Level
+11. CSS Positioning
+    - static, relative, absolute, fixed, sticky
+12. Display Property
+    - block, inline, inline-block, none
+13. Flexbox (Master this!)
+    - display: flex, justify-content, align-items, flex-wrap
+14. CSS Grid (Modern layouts)
+    - grid-template-columns, gap, grid-area, etc.
+15. Media Queries
+    - Responsive design using @media
+16. Pseudo-classes and Pseudo-elements
+    - :hover, :nth-child, ::before, ::after
+17. Transitions & Animations
+    - transition, @keyframes, animation
+18. Z-index and Stacking Context
+19. Overflow and Scroll
+20. Custom Fonts & @font-face
+
+🔵 Advanced Level
+21. CSS Variables (Custom Properties)
+22. Advanced Selectors
+    - Attribute selectors, :not, :is(), :has()
+23. Advanced Flex & Grid Layout Techniques
+24. Clipping and Masking
+    - clip-path, mask-image
+25. CSS Functions
+    - calc(), min(), max(), clamp()
+26. Responsive Units
+    - ch, ex, fr, etc.
+27. Creating Themes with CSS Variables
+28. Dark Mode with Media Queries
+29. Print Stylesheets
+30. Using CSS with Frameworks (Bootstrap, Tailwind Basics)
+
+🧠 Pro Tips / Expert Level
+31. Writing Maintainable CSS
+    - BEM Methodology
+32. Organizing CSS Files (Modular CSS, SCSS)
+33. Preprocessors
+    - Sass/SCSS Basics and Usage
+34. Performance Optimization
+    - Minification, critical CSS, removing unused CSS
+35. Modern CSS Tools
+    - PostCSS, Autoprefixer
+36. Browser Compatibility & CSS Resets
+37. Advanced Animations & Transforms
+38. Building Responsive Grids from Scratch
+39. Accessibility (a11y) with CSS
+40. Creating Design Systems with CSS

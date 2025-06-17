@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Forms - Complete Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    input, select, textarea, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    fieldset {
+      border: 1px solid #aaa;
+      padding: 15px;
+      margin-top: 10px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Forms - Full Notes & Examples</h1>
+
+  <section>
+    <h2>&lt;form&gt;</h2>
+    <p>The container for all form elements.</p>
+    <p>Attributes:</p>
+    <ul>
+      <li><code>action</code>: URL where form data is sent</li>
+      <li><code>method</code>: <code>get</code> or <code>post</code></li>
+    </ul>
+    <code>&lt;form action="/submit" method="post"&gt;...&lt;/form&gt;</code>
+  </section>
+
+  <section>
+    <h2>&lt;fieldset&gt; and &lt;legend&gt;</h2>
+    <p>Groups related form elements.</p>
+    <fieldset>
+      <legend>Personal Info</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+    </fieldset>
+  </section>
+
+  <section>
+    <h2>&lt;label&gt;</h2>
+    <p>Defines a label for a form element. Use <code>for</code> attribute to link to input ID.</p>
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+  </section>
+
+  <section>
+    <h2>&lt;input&gt; Element and Types</h2>
+    <p>Used to take user input in various formats.</p>
+    <ul>
+      <li><code>type="text"</code></li>
+      <li><code>type="email"</code></li>
+      <li><code>type="password"</code></li>
+      <li><code>type="checkbox"</code></li>
+      <li><code>type="radio"</code></li>
+      <li><code>type="number"</code></li>
+      <li><code>type="submit"</code></li>
+      <li><code>type="reset"</code></li>
+    </ul>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your name">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" max="120">
+
+    <label>
+      <input type="checkbox" name="subscribe"> Subscribe to newsletter
+    </label>
+  </section>
+
+  <section>
+    <h2>&lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;</h2>
+    <p>Dropdown list with groupings:</p>
+    <label for="country">Select Country:</label>
+    <select id="country" name="country">
+      <optgroup label="Asia">
+        <option value="in">India</option>
+        <option value="jp">Japan</option>
+      </optgroup>
+      <optgroup label="Europe">
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+      </optgroup>
+    </select>
+  </section>
+
+  <section>
+    <h2>&lt;textarea&gt;</h2>
+    <p>Multi-line text input.</p>
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message..."></textarea>
+  </section>
+
+  <section>
+    <h2>&lt;button&gt;</h2>
+    <p>Clickable button for submit or any JavaScript action.</p>
+    <button type="submit">Submit Form</button>
+    <button type="reset">Reset</button>
+    <button type="button" onclick="alert('Hello!')">Click Me</button>
+  </section>
+
+  <section>
+    <h2>Common Input Attributes</h2>
+    <ul>
+      <li><code>type</code> – Type of input (text, checkbox, radio, etc.)</li>
+      <li><code>name</code> – Name for form submission</li>
+      <li><code>value</code> – Default value</li>
+      <li><code>placeholder</code> – Placeholder text</li>
+      <li><code>required</code> – Makes field mandatory</li>
+      <li><code>readonly</code> – Prevents editing</li>
+      <li><code>disabled</code> – Disables the field</li>
+      <li><code>maxlength</code>, <code>min</code>, <code>max</code>, etc.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Final Example Form</h2>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Registration Form</legend>
+        
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="email2">Email:</label>
+        <input type="email" id="email2" name="email" required>
+
+        <label>
+          <input type="checkbox" name="terms" required>
+          I accept the terms and conditions
+        </label>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="">Select</option>
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+        </select>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="3"></textarea>
+
+        <button type="submit">Register</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <footer>
+    <p>Created by [Your Name] | HTML Forms Reference</p>
+  </footer>
+
+</body>
+</html>

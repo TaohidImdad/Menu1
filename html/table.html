@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Tabular Data Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    code {
+      background: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #999;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Tabular Data - Full Notes</h1>
+
+  <section>
+    <h2>1. &lt;table&gt;</h2>
+    <p>Creates a table structure to display tabular data.</p>
+    <code>&lt;table&gt;...&lt;/table&gt;</code>
+  </section>
+
+  <section>
+    <h2>2. &lt;caption&gt;</h2>
+    <p>Provides a title for the table.</p>
+    <code>&lt;caption&gt;Student Marks&lt;/caption&gt;</code>
+  </section>
+
+  <section>
+    <h2>3. &lt;colgroup&gt; and &lt;col&gt;</h2>
+    <p>Used for styling specific columns.</p>
+    <pre><code>&lt;colgroup&gt;
+  &lt;col span="1" style="background-color:lightgray;"&gt;
+  &lt;col span="2" style="background-color:lightblue;"&gt;
+&lt;/colgroup&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>4. &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</h2>
+    <p>These tags help organize the structure of a table:</p>
+    <ul>
+      <li><code>&lt;thead&gt;</code> - Header rows</li>
+      <li><code>&lt;tbody&gt;</code> - Main content rows</li>
+      <li><code>&lt;tfoot&gt;</code> - Footer rows</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</h2>
+    <ul>
+      <li><code>&lt;tr&gt;</code> - Table row</li>
+      <li><code>&lt;th&gt;</code> - Table header cell (bold, centered)</li>
+      <li><code>&lt;td&gt;</code> - Table data cell (normal cell)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Full Table Example</h2>
+    <p>Here is a full example using all tabular tags:</p>
+    <table>
+      <caption>Employee Report</caption>
+      <colgroup>
+        <col span="1" style="background-color:#f9f9f9;">
+        <col span="2" style="background-color:#eef;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>John</td>
+          <td>HR</td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Jane</td>
+          <td>IT</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">End of Report</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>7. Tips</h2>
+    <ul>
+      <li>Use <code>scope="col"</code> and <code>scope="row"</code> in <code>&lt;th&gt;</code> for accessibility</li>
+      <li>Style your tables with CSS or inline styles</li>
+      <li>Use <code>&lt;colgroup&gt;</code> for column-specific styles</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Created by [Your Name] | Tabular Data HTML Notes</p>
+  </footer>
+
+</body>
+</html>

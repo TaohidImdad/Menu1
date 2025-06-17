@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Map with JavaScript Position</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #image-container {
+      position: relative;
+      display: inline-block;
+    }
+    #marker {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: red;
+      border-radius: 50%;
+      display: none;
+      pointer-events: none;
+      z-index: 10;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🖼️ Clickable Image Map Example</h2>
+<p>Click on the red circle or gray rectangle area on the image to show a marker.</p>
+
+<div id="image-container">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg"
+       usemap="#birdmap" id="birdImage" alt="Bird Image">
+  <div id="marker"></div>
+</div>
+
+<map name="birdmap">
+  <!-- Circle (Head) -->
+  <area shape="circle" coords="220,120,30" alt="Bird Head" onclick="placeMarker(220, 120)">
+  <!-- Rectangle (Body) -->
+  <area shape="rect" coords="140,200,300,270" alt="Bird Body" onclick="placeMarker(220, 235)">
+</map>
+
+<script>
+  function placeMarker(x, y) {
+    const img = document.getElementById('birdImage');
+    const marker = document.getElementById('marker');
+    const rect = img.getBoundingClientRect();
+
+    const offsetX = rect.left + window.scrollX;
+    const offsetY = rect.top + window.scrollY;
+
+    marker.style.left = (offsetX + x - 7) + 'px';
+    marker.style.top = (offsetY + y - 7) + 'px';
+    marker.style.display = 'block';
+  }
+
+  document.getElementById('birdImage').addEventListener('click', function(e) {
+  const x = e.offsetX;
+  const y = e.offsetY;
+  console.log('Clicked at:', x, y);
+});
+  
+</script>
+
+</body>
+</html>
