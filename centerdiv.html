@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All CSS Centering Techniques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 40px 20px;
+      background: #fff;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .parent {
+      background: #e0f7fa;
+      height: 300px;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .child {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid-center {
+      display: grid;
+      place-items: center;
+    }
+    .absolute-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .margin-auto {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .inline-block-child {
+      display: inline-block;
+    }
+    .line-height-parent {
+      height: 100px;
+      line-height: 100px;
+    }
+    .table {
+      display: table;
+      width: 100%;
+      height: 300px;
+    }
+    .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .inset-center {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 200px;
+      height: 100px;
+    }
+    .fixed-center {
+      position: fixed;
+      top: 50vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h2>1. Flexbox Center</h2>
+  <div class="parent flex-center">
+    <div class="child">Flex Center</div>
+  </div>
+</section>
+
+<section>
+  <h2>2. Grid Center</h2>
+  <div class="parent grid-center">
+    <div class="child">Grid Center</div>
+  </div>
+</section>
+
+<section>
+  <h2>3. Absolute + Transform</h2>
+  <div class="parent">
+    <div class="child absolute-center">Absolute + Transform</div>
+  </div>
+</section>
+
+<section>
+  <h2>4. Margin Auto (Horizontal only)</h2>
+  <div class="parent text-center">
+    <div class="child margin-auto">Margin Auto</div>
+  </div>
+</section>
+
+<section>
+  <h2>5. Inline-block + Text-align (Horizontal only)</h2>
+  <div class="parent text-center">
+    <div class="child inline-block-child">Inline Block</div>
+  </div>
+</section>
+
+<section>
+  <h2>6. Line-height (Vertical only)</h2>
+  <div class="parent line-height-parent text-center">
+    <div class="child inline-block-child">Line-height Vertical</div>
+  </div>
+</section>
+
+<section>
+  <h2>7. Table-cell Vertical Center</h2>
+  <div class="table">
+    <div class="table-cell">
+      <div class="child">Table-cell Center</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>8. Inset + Margin Auto</h2>
+  <div class="parent">
+    <div class="child inset-center">Inset + Auto</div>
+  </div>
+</section>
+
+<section>
+  <h2>9. Fixed + Transform (center on screen)</h2>
+  <div class="child fixed-center">Fixed + Transform</div>
+</section>
+
+</body>
+</html>

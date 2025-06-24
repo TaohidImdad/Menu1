@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Properties Tutorial</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .box {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      border: 2px dashed #999;
+      margin: 10px 0;
+      padding: 10px;
+      height: 200px;
+    }
+    .item1 { background: tomato; }
+    .item2 { background: royalblue; }
+    .item3 { background: seagreen; }
+  </style>
+</head>
+<body>
+
+<h1>All Flexbox Properties – Explained with Examples</h1>
+
+<!-- 1. display: flex -->
+<h2>1. display: flex</h2>
+<p>Makes a container a flexbox container.</p>
+<div class="container">
+  <div class="box item1">1</div>
+  <div class="box item2">2</div>
+  <div class="box item3">3</div>
+</div>
+
+<!-- 2. flex-direction -->
+<h2>2. flex-direction</h2>
+<p>Defines the direction of the flex items.</p>
+<pre><code>flex-direction: row | row-reverse | column | column-reverse</code></pre>
+<div class="container" style="flex-direction: row;">
+  <div class="box item1">row</div>
+  <div class="box item2">row</div>
+  <div class="box item3">row</div>
+</div>
+<div class="container" style="flex-direction: column;">
+  <div class="box item1">column</div>
+  <div class="box item2">column</div>
+  <div class="box item3">column</div>
+</div>
+
+<!-- 3. justify-content -->
+<h2>3. justify-content</h2>
+<p>Aligns items horizontally (main axis).</p>
+<pre><code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly</code></pre>
+<div class="container" style="justify-content: space-between;">
+  <div class="box item1">1</div>
+  <div class="box item2">2</div>
+  <div class="box item3">3</div>
+</div>
+
+<!-- 4. align-items -->
+<h2>4. align-items</h2>
+<p>Aligns items vertically (cross axis).</p>
+<pre><code>align-items: flex-start | flex-end | center | stretch | baseline</code></pre>
+<div class="container" style="align-items: flex-start;">
+  <div class="box item1" style="height: 50px;">1</div>
+  <div class="box item2" style="height: 100px;">2</div>
+  <div class="box item3" style="height: 150px;">3</div>
+</div>
+
+<!-- 5. align-content -->
+<h2>5. align-content</h2>
+<p>Aligns rows in multi-line flex (only works with wrap).</p>
+<pre><code>align-content: flex-start | flex-end | center | space-between | space-around | stretch</code></pre>
+<div class="container" style="flex-wrap: wrap; align-content: center;">
+  <div class="box item1" style="width: 100px;">1</div>
+  <div class="box item2" style="width: 100px;">2</div>
+  <div class="box item3" style="width: 100px;">3</div>
+  <div class="box item1" style="width: 100px;">4</div>
+  <div class="box item2" style="width: 100px;">5</div>
+</div>
+
+<!-- 6. flex-wrap -->
+<h2>6. flex-wrap</h2>
+<p>Allows items to wrap to the next line.</p>
+<pre><code>flex-wrap: nowrap | wrap | wrap-reverse</code></pre>
+<div class="container" style="flex-wrap: wrap;">
+  <div class="box item1" style="width: 150px;">1</div>
+  <div class="box item2" style="width: 150px;">2</div>
+  <div class="box item3" style="width: 150px;">3</div>
+  <div class="box item1" style="width: 150px;">4</div>
+</div>
+
+<!-- 7. flex (shorthand for grow, shrink, basis) -->
+<h2>7. flex</h2>
+<p>Shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.</p>
+<pre><code>flex: 1;  // flex-grow: 1</code></pre>
+<div class="container">
+  <div class="box item1" style="flex: 1;">1</div>
+  <div class="box item2" style="flex: 2;">2</div>
+  <div class="box item3" style="flex: 3;">3</div>
+</div>
+
+<!-- 8. order -->
+<h2>8. order</h2>
+<p>Controls the order of flex items.</p>
+<div class="container">
+  <div class="box item1" style="order: 2;">1</div>
+  <div class="box item2" style="order: 1;">2</div>
+  <div class="box item3" style="order: 3;">3</div>
+</div>
+
+<!-- 9. align-self -->
+<h2>9. align-self</h2>
+<p>Overrides <code>align-items</code> for a specific item.</p>
+<pre><code>align-self: auto | flex-start | flex-end | center | baseline | stretch</code></pre>
+<div class="container" style="align-items: center;">
+  <div class="box item1" style="align-self: flex-start;">1</div>
+  <div class="box item2">2</div>
+  <div class="box item3" style="align-self: flex-end;">3</div>
+</div>
+
+<!-- 10. gap -->
+<h2>10. gap</h2>
+<p>Sets space between flex items.</p>
+<div class="container" style="gap: 20px;">
+  <div class="box item1">1</div>
+  <div class="box item2">2</div>
+  <div class="box item3">3</div>
+</div>
+
+</body>
+</html>

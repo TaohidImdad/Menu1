@@ -1,0 +1,121 @@
+
+📘 CSS Display Property – Full Notes
+------------------------------------
+
+🔧 What is `display`?
+The `display` property in CSS determines how an element is shown and behaves on the page.
+
+-------------------------------------------------
+🔑 Common Display Values
+-------------------------------------------------
+
+1. block
+---------
+- Starts on a new line
+- Takes full width
+- You CAN set width and height
+
+Example:
+<div style="display: block;">I’m a block element</div>
+
+2. inline
+---------
+- Does NOT start on a new line
+- Only as wide as its content
+- You CANNOT set width or height
+
+Example:
+<span style="display: inline;">I’m inline</span>
+
+3. inline-block
+---------------
+- Behaves like inline
+- BUT allows setting width and height
+
+Example:
+<span style="display: inline-block; width: 100px;">I’m inline-block</span>
+
+4. none
+--------
+- Element is hidden completely (like it's removed)
+- It’s not shown and doesn't take space
+
+Example:
+<div style="display: none;">I disappear!</div>
+
+5. flex
+--------
+- Enables Flexbox layout
+- Children can align, wrap, space evenly
+
+Example:
+<div style="display: flex;">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+
+6. inline-flex
+---------------
+- Same as flex, but behaves inline
+
+7. grid
+--------
+- Enables CSS Grid layout
+- Allows placement in rows and columns
+
+Example:
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <div>Box 1</div>
+  <div>Box 2</div>
+</div>
+
+8. inline-grid
+---------------
+- Same as grid, but behaves inline
+
+9. contents
+-----------
+- Removes the box of the element
+- Children remain visually
+
+Example:
+<div style="display: contents;">
+  <p>This acts like I'm directly inside the parent</p>
+</div>
+
+10. list-item
+-------------
+- Behaves like a <li>
+- Adds a bullet
+
+Example:
+<div style="display: list-item;">I look like a list item</div>
+
+11. table, table-row, table-cell
+--------------------------------
+- Behaves like a table structure
+
+Example:
+<div style="display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell;">Cell 1</div>
+    <div style="display: table-cell;">Cell 2</div>
+  </div>
+</div>
+
+-------------------------------------------------
+🧠 Summary Table
+-------------------------------------------------
+
+| Display Type     | Behaves Like     | Can Set Width/Height? | Starts New Line? |
+|------------------|------------------|------------------------|------------------|
+| block            | <div>            | Yes                    | Yes              |
+| inline           | <span>           | No                     | No               |
+| inline-block     | inline+block     | Yes                    | No               |
+| none             | hidden           | N/A                    | N/A              |
+| flex             | layout box       | Yes                    | Yes              |
+| grid             | layout grid      | Yes                    | Yes              |
+| contents         | ghost container  | No                     | No               |
+| list-item        | <li>             | Yes                    | Yes              |
+
+✅ Tip: Use `display` with `position`, `float`, and `visibility` to control full element layout.

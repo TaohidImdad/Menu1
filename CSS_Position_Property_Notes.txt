@@ -1,0 +1,89 @@
+
+📘 CSS Position Property – Full Notes
+-------------------------------------
+
+🔧 What is `position`?
+The `position` property in CSS controls how elements are positioned in the layout.
+
+There are 5 main position values:
+1. static
+2. relative
+3. absolute
+4. fixed
+5. sticky
+
+-------------------------------------------------
+1. static (Default)
+-------------------------------------------------
+- Default position (no special behavior)
+- Follows the normal document flow
+- You CANNOT use top, right, bottom, or left
+
+Example:
+<div style="position: static;">I'm static</div>
+
+-------------------------------------------------
+2. relative
+-------------------------------------------------
+- Element remains in the document flow
+- You CAN move it using top, left, bottom, right
+- Other elements still reserve its original space
+
+Example:
+<div style="position: relative; top: 20px; left: 30px;">I'm relative</div>
+
+🧠 Think: Move relative to where it would normally appear.
+
+-------------------------------------------------
+3. absolute
+-------------------------------------------------
+- Removed from normal document flow
+- Positioned relative to the nearest positioned ancestor
+  (ancestor with position: relative, absolute, or fixed)
+- If none, positioned relative to the <html> or <body>
+
+Example:
+<div style="position: relative;">
+  <div style="position: absolute; top: 0; left: 0;">I'm absolutely positioned</div>
+</div>
+
+🧠 Use for tooltips, dropdowns, popups inside containers.
+
+-------------------------------------------------
+4. fixed
+-------------------------------------------------
+- Removed from normal flow
+- Positioned relative to the viewport (screen)
+- Does NOT move when the page is scrolled
+
+Example:
+<div style="position: fixed; top: 0; right: 0;">I'm fixed</div>
+
+🧠 Use for sticky headers, floating buttons.
+
+-------------------------------------------------
+5. sticky
+-------------------------------------------------
+- Mix of relative and fixed
+- Acts like relative until a scroll position is reached, then becomes fixed
+- Works only with top, left, right, bottom
+
+Example:
+<div style="position: sticky; top: 0;">I'm sticky</div>
+
+🧠 Great for sticky table headers and sections.
+
+-------------------------------------------------
+🧠 Summary Table
+-------------------------------------------------
+
+| Position   | In Document Flow? | Scrolls with Page? | Can Use Top/Left? | Reference Point               |
+|------------|-------------------|---------------------|-------------------|-------------------------------|
+| static     | Yes               | Yes                 | No                | Normal flow                   |
+| relative   | Yes               | Yes                 | Yes               | Its own normal position       |
+| absolute   | No                | Yes                 | Yes               | Closest positioned ancestor   |
+| fixed      | No                | No                  | Yes               | Viewport                      |
+| sticky     | Yes               | Partially           | Yes               | Scroll position               |
+
+✅ Tip: Combine `position` with `z-index` and `display` for advanced layouts.
+
