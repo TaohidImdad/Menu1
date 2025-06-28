@@ -1,0 +1,150 @@
+
+CSS Animation - Descriptive Note
+================================
+
+CSS animations allow you to animate transitions from one CSS style configuration to another.
+They consist of two main parts:
+1. @keyframes - which defines the animation sequence
+2. animation properties - which apply the animation to an element
+
+----------------------------------------
+1. @keyframes Rule
+----------------------------------------
+@keyframes defines the behavior of the animation by specifying the style changes at various points (called keyframes) during the animation sequence.
+
+Syntax:
+@keyframes animationName {
+  0%   { /* styles */ }
+  50%  { /* styles */ }
+  100% { /* styles */ }
+}
+
+Example:
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+----------------------------------------
+2. CSS Animation Properties
+----------------------------------------
+
+animation-name: Specifies the name of the @keyframes animation.
+animation-duration: Time (e.g., 2s, 500ms) to complete one cycle.
+animation-timing-function: Specifies the speed curve (linear, ease, ease-in, ease-out, etc.)
+animation-delay: Delay before the animation starts.
+animation-iteration-count: Number of times animation should repeat (or 'infinite').
+animation-direction: Direction of animation flow (normal, reverse, alternate, alternate-reverse).
+animation-fill-mode: How styles are applied before/after execution (none, forwards, backwards, both).
+animation-play-state: Play or pause the animation (running, paused).
+
+----------------------------------------
+3. Example Usage
+----------------------------------------
+.rotating-box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+----------------------------------------
+4. Shorthand Property
+----------------------------------------
+You can write all animation properties in a single line:
+
+animation: rotate 2s linear infinite alternate;
+
+Order:
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+
+----------------------------------------
+5. Notes:
+----------------------------------------
+- You can define multiple animations by separating them with commas.
+- Always use vendor prefixes (-webkit-, -moz-) for better browser support if needed.
+- Combine transform and opacity for smooth effects.
+- Use will-change for performance optimization on animated elements.
+
+
+CSS Transform & Transition - Descriptive Note
+=============================================
+
+---------------------------------------------------
+1. CSS Transform
+---------------------------------------------------
+The transform property allows you to visually manipulate an element by skewing, rotating, translating, or scaling.
+
+Syntax:
+transform: function(value);
+
+Common Transform Functions:
+- translateX(px)     → moves the element horizontally
+- translateY(px)     → moves the element vertically
+- translate(x, y)    → moves in both directions
+- scale(n)           → scales both width and height
+- scaleX(n), scaleY(n)
+- rotate(deg)        → rotates the element
+- skewX(deg), skewY(deg)
+- matrix()           → applies a 2D transformation using a matrix of six values
+
+Example:
+.box {
+  transform: rotate(45deg) scale(1.5);
+}
+
+Note:
+- Multiple transforms can be combined by separating them with spaces.
+- Transforms do not affect the layout of surrounding elements.
+
+---------------------------------------------------
+2. CSS Transition
+---------------------------------------------------
+The transition property allows you to change property values smoothly (over a given duration).
+
+Syntax:
+transition: property duration timing-function delay;
+
+Individual Properties:
+- transition-property: the CSS property to animate (e.g., width, background-color)
+- transition-duration: time over which the transition occurs (e.g., 1s)
+- transition-timing-function: speed curve of the transition (e.g., ease, linear)
+- transition-delay: delay before the transition starts
+
+Example:
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: green;
+}
+
+Shorthand Example:
+transition: all 0.5s ease-in-out;
+
+Common timing-functions:
+- ease           (default)
+- linear
+- ease-in
+- ease-out
+- ease-in-out
+- cubic-bezier(n,n,n,n) → custom timing function
+
+---------------------------------------------------
+3. Notes
+---------------------------------------------------
+- Transitions only work on properties that have intermediate values (e.g., color, width, opacity).
+- You can transition multiple properties at once by separating them with commas.
+- Combine with :hover, :focus, or JS events for interactive effects.
+- Transitions can be interrupted by another style change, restarting the transition.
+
