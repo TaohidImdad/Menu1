@@ -1,0 +1,147 @@
+Bootstrap Cheat Sheet (Descriptive)
+===================================
+
+📦 Layout & Containers
+----------------------
+- .container            → Fixed width container (responsive)
+- .container-fluid      → Full width container (100%)
+- .row                  → Flexbox container for columns
+- .col, .col-4, etc.    → Grid columns (12 column system)
+
+📐 Grid System
+-------------
+- Responsive breakpoints:
+  - xs: <576px (no prefix, e.g., col-6)
+  - sm: ≥576px (col-sm-6)
+  - md: ≥768px (col-md-6)
+  - lg: ≥992px (col-lg-6)
+  - xl: ≥1200px (col-xl-6)
+  - xxl: ≥1400px (col-xxl-6)
+
+- Nesting:
+  <div class="row"><div class="col"><div class="row"><div class="col">Nested</div></div></div></div>
+
+🎨 Colors
+---------
+- Text: text-primary, text-secondary, text-success, text-danger, text-warning, text-info, text-light, text-dark
+- Background: bg-primary, bg-danger, etc.
+
+📏 Spacing Utilities
+--------------------
+- Margin: m, mt, mb, ms, me (top, bottom, start, end)
+- Padding: p, pt, pb, ps, pe
+- Sizes: 0 to 5, auto
+  Example: mt-3, px-2, m-auto
+
+🧭 Display & Visibility
+-----------------------
+- d-none, d-block, d-inline, d-flex, d-grid
+- Responsive: d-md-none, d-lg-block
+
+📐 Flexbox Utilities
+--------------------
+- d-flex                → Enables flexbox
+- justify-content-start | center | end | between | around | evenly
+- align-items-start | center | end
+- flex-row | flex-column
+
+🅰️ Typography
+-------------
+- Headings: h1 to h6
+- Lead text: .lead
+- Bold: fw-bold
+- Italics: fst-italic
+- Text align: text-start, text-center, text-end
+- Text transform: text-uppercase, text-lowercase, text-capitalize
+
+🔘 Buttons
+----------
+- Basic: btn btn-primary, btn-danger, etc.
+- Outline: btn-outline-primary
+- Sizes: btn-sm, btn-lg
+- Block (full-width): d-grid w-100
+
+🃏 Cards
+--------
+<div class="card">
+  <img src="..." class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">Title</h5>
+    <p class="card-text">Text</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+
+📄 Forms
+--------
+- .form-control         → Input, textarea
+- .form-label           → Labels
+- .form-check           → Checkbox/radio container
+- .form-check-input     → Input type
+- .form-select          → Select dropdown
+
+🔲 Tables
+----------
+- .table                → Basic table
+- .table-striped        → Zebra-striping
+- .table-bordered       → Borders
+- .table-hover          → Hover effect
+
+🔔 Alerts
+--------
+<div class="alert alert-success" role="alert">
+  Success message!
+</div>
+
+📂 Navbar
+---------
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Brand</a>
+  <button class="navbar-toggler" ...></button>
+  <div class="collapse navbar-collapse">...</div>
+</nav>
+
+📊 Progress Bars
+----------------
+<div class="progress">
+  <div class="progress-bar" style="width: 50%;">50%</div>
+</div>
+
+🧱 Accordion
+------------
+<div class="accordion" id="accordionExample">...</div>
+
+🪟 Modal
+--------
+<button data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
+<div class="modal fade" id="myModal">...</div>
+
+📜 Tooltips & Popovers
+----------------------
+<button data-bs-toggle="tooltip" title="Tooltip text">Hover me</button>
+<button data-bs-toggle="popover" title="Title" data-bs-content="Content">Click me</button>
+
+⏰ Toast
+--------
+<div class="toast">...</div>
+
+📱 Responsive Helpers
+---------------------
+- Responsive spacing: mt-md-3, px-lg-5
+- Responsive columns: col-sm-6 col-md-4 col-lg-3
+
+🔧 Misc
+--------
+- Rounded corners: rounded, rounded-circle, rounded-0
+- Shadows: shadow, shadow-sm, shadow-lg
+- Border: border, border-0, border-primary
+
+🌐 Resources
+------------
+- Docs: https://getbootstrap.com/docs/
+- Icons: https://icons.getbootstrap.com/
+- Examples: https://getbootstrap.com/docs/5.3/examples/
+
+🚀 Tip:
+------
+Use "inspect element" to learn and debug Bootstrap classes on any website.

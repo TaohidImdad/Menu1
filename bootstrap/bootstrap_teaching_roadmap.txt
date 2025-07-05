@@ -1,0 +1,137 @@
+Bootstrap Learning Roadmap (Step by Step for Students)
+======================================================
+
+📌 Phase 1: Introduction & Setup (Day 1)
+----------------------------------------
+Goal: Understand what Bootstrap is and how to include it.
+
+Topics:
+- What is Bootstrap? Why use it?
+- CDN vs Download
+- Bootstrap file structure (CSS/JS)
+
+Activities:
+- Create an HTML page with Bootstrap via CDN
+- Add a <div class="container"> with some text
+
+Exercise:
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+📌 Phase 2: Grid System & Layout (Day 2–3)
+------------------------------------------
+Goal: Learn the 12-column grid system and responsive layout.
+
+Topics:
+- Containers (.container vs .container-fluid)
+- Rows & Columns
+- Responsive classes: col-sm, col-md, col-lg
+
+Activities:
+- Build a 2-column layout
+- Create a 3-column responsive gallery
+
+Exercise:
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">1</div>
+    <div class="col-md-4">2</div>
+    <div class="col-md-4">3</div>
+  </div>
+</div>
+
+📌 Phase 3: Utilities (Day 4)
+-----------------------------
+Goal: Use spacing, colors, text formatting.
+
+Topics:
+- Margin, Padding (m-3, p-2)
+- Text utilities (text-center, fw-bold)
+- Colors (bg-danger, text-success)
+
+Activities:
+- Create a colorful card layout
+- Style a paragraph using Bootstrap utilities
+
+📌 Phase 4: Components Basics (Day 5–6)
+--------------------------------------
+Goal: Use ready-made Bootstrap components.
+
+Topics:
+- Buttons, Alerts
+- Cards
+- Badges, List groups
+
+Activities:
+- Create a pricing card
+- Build a notification alert with a dismiss button
+
+📌 Phase 5: Forms & Tables (Day 7)
+----------------------------------
+Goal: Create styled forms and tables.
+
+Topics:
+- Input groups, labels, validation
+- Table styles: striped, bordered
+
+Activities:
+- Build a form with name, email, message
+- Create a student result table
+
+📌 Phase 6: Navigation & Menus (Day 8)
+--------------------------------------
+Goal: Build responsive navigation bars.
+
+Topics:
+- Navbar component
+- Toggler for mobile
+- Dropdown menu
+
+Activities:
+- Create a simple top navbar
+- Add a dropdown menu inside navbar
+
+📌 Phase 7: Advanced Components (Day 9)
+---------------------------------------
+Goal: Interactivity with JS-powered components.
+
+Topics:
+- Modals, Carousels
+- Tooltips, Toasts
+- Accordion
+
+Activities:
+- Build a portfolio modal popup
+- Make an FAQ section with accordion
+
+📌 Phase 8: Flex, Responsive & Custom (Day 10–11)
+--------------------------------------------------
+Goal: Control layout using flex, make it mobile-friendly.
+
+Topics:
+- Flex classes
+- Order, alignment
+- Responsive display (d-none d-md-block)
+
+Activities:
+- Create a flexbox product list
+- Adjust layout for mobile and desktop
+
+📌 Phase 9: Mini Projects (Day 12–14)
+-------------------------------------
+Goal: Apply all knowledge in real projects.
+
+Project Ideas:
+1. Personal Portfolio Site
+2. Simple E-commerce Product Grid
+3. Blog Page with Sidebar
+4. Dashboard Layout with Cards & Charts
+
+🧠 Teaching Tips
+-----------------
+- Use CodePen or VS Code Live Server for live preview
+- Start each class with a quick recap and mini quiz
+- Use cheat sheets and examples
+- Explain grid and layout with diagrams
+- Group projects encourage collaboration
+
+Good luck and happy teaching!

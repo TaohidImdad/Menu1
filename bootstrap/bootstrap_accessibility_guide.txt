@@ -1,0 +1,147 @@
+Bootstrap Accessibility Guide (Descriptive)
+===========================================
+
+Bootstrap supports accessibility by following ARIA (Accessible Rich Internet Applications) standards. Here's a complete reference to accessibility features and attributes commonly used in Bootstrap components.
+
+🔹 Why Accessibility?
+----------------------
+Accessibility ensures that websites are usable by people with disabilities — especially screen reader users and keyboard users.
+
+Bootstrap includes many built-in roles, keyboard support, focus handling, and ARIA attributes.
+
+==============================
+🔸 Common ARIA Attributes
+==============================
+
+1. aria-label="text"
+   - Provides an invisible label for an element.
+   - Used when no visible label exists.
+   Example:
+   <button class="btn-close" aria-label="Close"></button>
+
+2. aria-labelledby="id"
+   - Refers to another element that labels the current one.
+   - Use when you already have a visible label.
+   Example:
+   <input aria-labelledby="searchLabel">
+   <label id="searchLabel">Search</label>
+
+3. aria-describedby="id"
+   - Refers to another element that describes the current one.
+   Example:
+   <input aria-describedby="desc">
+   <div id="desc">Enter your full name</div>
+
+4. aria-hidden="true"
+   - Hides an element from screen readers.
+   Example: <span aria-hidden="true">★</span>
+
+5. aria-disabled="true"
+   - Marks an element as disabled (not interactive).
+   - Should be used in addition to the 'disabled' attribute.
+
+==============================
+🔸 Accessible Bootstrap Components
+==============================
+
+✅ Buttons
+----------
+- Use `aria-label` for icon-only buttons.
+- Example:
+  <button class="btn" aria-label="Play video">▶</button>
+
+✅ Modals
+---------
+Bootstrap automatically adds:
+- role="dialog"
+- aria-modal="true"
+- aria-labelledby and aria-describedby
+
+Make sure to add:
+- <h5 id="modalTitle"> and <div id="modalDesc">
+
+✅ Alerts
+---------
+Alerts use `role="alert"` to notify assistive tech of dynamic content.
+Example:
+<div class="alert alert-danger" role="alert">Error occurred</div>
+
+✅ Forms
+--------
+- Always use <label> or `aria-label` / `aria-labelledby`
+- Use `aria-describedby` for helper text or error message
+- Make form controls focusable and keyboard accessible
+
+✅ Navbars & Dropdowns
+----------------------
+- Navbars use semantic HTML with landmarks (nav, ul/li)
+- Dropdowns: Use `aria-expanded`, `aria-haspopup`, `aria-controls`
+Example:
+<button aria-expanded="false" aria-controls="dropdownMenu">Menu</button>
+
+✅ Tooltips
+-----------
+Tooltips are not natively accessible. Consider:
+- Add `aria-label` or `aria-describedby`
+- Don't rely on hover-only elements for important info
+
+✅ Carousels
+------------
+Bootstrap carousels include:
+- role="region"
+- aria-live="polite"
+- aria-labels for controls and indicators
+
+Make sure users can control autoplay manually for better accessibility.
+
+✅ Collapse/Accordion
+----------------------
+Use:
+- aria-expanded (true/false)
+- aria-controls (ID of collapsible content)
+
+Example:
+<button aria-expanded="false" aria-controls="faq1">Show FAQ</button>
+<div id="faq1">Answer...</div>
+
+==============================
+🔸 Keyboard Accessibility
+==============================
+- Tab: Navigate focusable elements
+- Enter/Space: Activate buttons, links
+- Escape: Close modals, dropdowns
+- Arrow keys: Navigate dropdowns, tabs, carousels
+
+Bootstrap components support keyboard by default using JS APIs.
+
+==============================
+🔸 Screen Reader-Only Content
+==============================
+Bootstrap includes `.visually-hidden` utility class.
+
+Use when you want text for screen readers only:
+Example:
+<span class="visually-hidden">Next Slide</span>
+
+==============================
+🔸 Roles and Landmarks
+==============================
+- role="button"       → for clickable elements not using <button>
+- role="alert"        → for status messages
+- role="dialog"       → for modals
+- role="navigation"   → for navbars
+- role="region"       → for major content sections
+
+==============================
+🧠 Tips for Accessibility in Bootstrap
+==============================
+- Use semantic HTML first (button, nav, form)
+- Use ARIA only when needed
+- Always label interactive elements
+- Test with screen readers and keyboard only
+- Avoid auto-focus or auto-play without user control
+
+📚 Resources
+------------
+- Bootstrap Accessibility Docs: https://getbootstrap.com/docs/5.3/getting-started/accessibility/
+- WAI-ARIA Overview: https://www.w3.org/WAI/standards-guidelines/aria/
